@@ -4,8 +4,12 @@
 <div class="clearing">
 
 <style>
+  <% if @featured_article.photo %>
   .firstFeaturedArticle { background-image: url(/assets/<%= @featured_article.photo; %>); }
+  <% end %>
+  <% if @second_featured_article.photo %>
   .secondFeaturedArticle { background-image: url(/assets/<%= @second_featured_article.photo; %>); }
+  <% end %>
 </style>
 
 <div class="row">
