@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p id="newArticle"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span><%= link_to 'New Article', new_article_path %></p>
+<div class="clearing">
+
+<style>
+  .firstFeaturedArticle { background-image: url(/assets/<%= @featured_article.photo; %>); }
+  .secondFeaturedArticle { background-image: url(/assets/<%= @second_featured_article.photo; %>); }
+</style>
+
+<div class="row">
+
+    <div class="jumbotron firstFeaturedArticle">
+      <h1><%= @featured_article.title %></h1>
+      <p> <%= truncate(@featured_article.textbody, length: 80) %></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">More</a></p>
+    </div>
+
+    <div class="jumbotron secondFeaturedArticle">
+      <h1><%= @second_featured_article.title %></h1>
+      <p> <%= truncate(@second_featured_article.textbody, length: 80) %></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">More</a></p>
+    </div>
+
+  <div class="clearing"></div>
+
+</div>
+
+
+
+<h2>Latest Articles</h2>
+
+
+<hr>
+<div class ="row">
+    <% @articles.each do |article| %>
+      <div class = "col-xs-12 col-md-6 col-lg-6 article">
+          <div class="articleWrapper">
+            <p class = "articleTitle"><%= article.title %></p>
+            <% if article.photo %>
+              <%= image_tag(article.photo, class: "img-responsive my-image teaser-image" ) %> 
+            <% end %>
+            <div class="teaserText">
+              <%= truncate(article.textbody, length: 400) %>
+              <%= link_to 'Show', article %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+
+

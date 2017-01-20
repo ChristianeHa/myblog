@@ -1,3 +1,75 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', 'Verdana', sans-serif;
+	background-color: #fafafa;
+	margin: 0px;
+}
+
+.navbar-nav {
+	float: right;
+	margin-right: 100px;
+}
+
+.navbar-brand {
+	margin-top: 10px;
+	margin-left: 50px;
+	font-family: 'Indie Flower', 'Verdana', sans-serif;
+	font-size: 2em;
+}
+
+.navbar-default {
+	background-color: white;
+	border-color: grey; 
+}
+
+
+.mainContent {
+	margin-top: 100px;
+	padding-left: 130px;
+	padding-right: 130px;
+}
+
+/* Footer */
+
+#footer {
+	height: 50px;
+	background-color: black;
+	color: white;
+	font-family: 'Indie Flower', 'Verdana', sans-serif;
+	font-size: 1.2em;
+}
+
+.footerText {
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
+}
+
+/* About + Contact page */
+
+.aboutText {
+	margin-left: 400px;
+	margin-right: 400px;
+}
+
+.aboutText h1 {
+	text-align: center;
+}
+
+.aboutText p {
+	font-size: 2em;
+}
+
+.aboutText h1,
+.aboutText p {
+	font-family: 'Indie Flower', 'Verdana', sans-serif;
+	color: grey;
+}

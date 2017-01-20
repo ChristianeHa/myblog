@@ -1,0 +1,98 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#newArticle {
+	float: right;
+}
+
+.clearing {
+	clear: both;
+}
+
+
+/*Featured Article*/
+
+.jumbotron {
+	width: 50%;
+	float: left;
+	color: white;
+	height: 500px;
+}
+
+.jumbotron h1,
+.jumbotron p {
+	padding: 20px;
+}
+
+
+
+/*Teaser Article */
+
+.article {
+	border: 0.5px solid lightgrey;
+	border-radius: 10px;
+	background-color: white;
+	margin-bottom: 15px;
+	height: 300px;
+}
+
+.articleTitle {
+	font-size: 2em;
+	text-align: center;
+}
+
+.teaser-image {
+	float: left;
+	width: 25%;
+	margin: 10px;
+}
+
+.teaserText,
+.teaserText p,
+.teaserText a {
+	display: inline;
+	width: 75%;
+}
+
+a:visited {
+	color: white;
+}
+
+.btn-primary {
+	background-color: black;
+	color: white;
+	border-color: black;
+}
+
+.btn-primary:active:focus, 
+.btn-primary:active:hover,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary.focus, 
+.open>.dropdown-toggle.btn-primary:focus, 
+.open>.dropdown-toggle.btn-primary:hover{
+	background-color: black;
+	border-color: black;
+}
+
+.btn:active:focus,
+.btn:focus {
+	outline: 0px;
+	outline-offset: 0px;
+}
+
+/* Main article */
+
+.articleMetaData {
+	display: block-inline;
+	padding: 20px;
+	float: left;
+}
+
+.articleImage {
+	height: 500px;
+	margin: 0 auto;	
+}
+

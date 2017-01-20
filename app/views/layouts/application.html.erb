@@ -2,26 +2,54 @@
 <html>
   <head>
     <title>Myblog</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+     <meta name="viewport" content="width=device-width, initial-scale= 1 ">
+     <%= csrf_meta_tags %>
+
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Varela Round" rel="stylesheet">
+
   </head>
 
   <body>
-  	<nav>
-  		<ul>
-    		<li>Home</li>
-    		<li>About</li>
-    		<li>Contact</li>
-  		</ul>
-	</nav>
 
-    <%= yield %>
+	<nav class= "navbar navbar-default navbar-fixed-top">
+	 <!--  <div class = "container"> -->
+	        
+	    <div class="navbar-header">
+	       <a class="navbar-brand" href="#">About UX</a>
+	       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	       		<span class="sr-only">Toggle navigation</span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	       	</button>
+	    </div> <!--end navbar-header -->
+
+	    <div class= "navbar-collapse collapse">
+	       <ul class= "nav navbar-nav">
+	        	<li><a href="#">About</a></li>
+	        	<li><a href="#">Contact</a></li>
+	        </ul>
+	    </div> <!--end navbar collapse -->
+	<!--   </div> -->
+	</nav> <!--end navbar -->
+
+ 	<div class="mainContent">
+    	<%= yield %>
+    </div>
 
 
-    <footer>
-    	&copy; 2017 Christiane Hasslberger
-    </footer>
+    <div id="footer">
+		<footer>
+			<div class="footerText">&copy; 2017 Christiane Ha&szlig;lberger</div>
+		</footer>
+	</div>
+
   </body>
 </html>
